@@ -18,6 +18,8 @@ import com.example.movieskmm.android.common.Detail
 import com.example.movieskmm.android.common.Home
 import com.example.movieskmm.android.common.MovieAppBar
 import com.example.movieskmm.android.common.movieDestinations
+import com.example.movieskmm.android.detail.DetailScreen
+import com.example.movieskmm.android.detail.DetailViewModel
 import com.example.movieskmm.android.home.HomeScreen
 import com.example.movieskmm.android.home.HomeViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -70,21 +72,26 @@ fun MovieApp() {
                         homeViewModel.loadMovies(forceReload = it)
                     },
                     navigateToDetail = {
+                        navController.currentBackStackEntry?.savedStateHandle?.set(
+                            key = "movieId",
+                            value = it.id
+                        )
                         navController.navigate(
-                            "${Detail.route}/${it.movieId}"
+                            "${Detail.route}/${it.id}"
                         )
                     }
                 )
             }
-            /*
+
             composable(Detail.routeWithArgs, arguments = Detail.arguments){
-                val movieId = it.arguments?.getString("movieId") ?: "0"
+                val movieId = navController.previousBackStackEntry?.savedStateHandle?.get<Int>("movieId")  ?: "0"
+                println("MSJ-> $movieId")
                 val detailViewModel: DetailViewModel = koinViewModel(
-                    parameters = { parametersOf(movieId.toInt()) }
+                    parameters = { parametersOf(movieId) }
                 )
 
                 DetailScreen(uiState = detailViewModel.uiState)
-            }*/
+            }
         }
 
     }

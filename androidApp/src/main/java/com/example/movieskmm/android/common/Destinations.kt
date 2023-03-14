@@ -3,7 +3,7 @@ package com.example.movieskmm.android.common
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
 
-interface Destination{
+interface Destination {
     val title: String
     val route: String
     val routeWithArgs: String
@@ -18,19 +18,20 @@ object Home: Destination{
 
     override val routeWithArgs: String
         get() = route
-
 }
 
 object Detail: Destination{
     override val title: String
-        get() = "Movie Details"
+        get() = "Movie details"
+
     override val route: String
         get() = "detail"
+
     override val routeWithArgs: String
         get() = "$route/{movieId}"
 
     val arguments = listOf(
-        navArgument(name = "movideId"){type = NavType.IntType}
+        navArgument(name = "movieId"){type = NavType.IntType}
     )
 }
 

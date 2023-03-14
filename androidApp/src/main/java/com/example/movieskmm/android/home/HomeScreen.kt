@@ -26,30 +26,30 @@ fun HomeScreen(
     modifier: Modifier = Modifier,
     uiState: HomeScreenState,
     loadNextMovies: (Boolean) -> Unit,
-    navigateToDetail:(Movie) -> Unit
+    navigateToDetail: (Movie) -> Unit
 ) {
-
     val pullRefreshState = rememberPullRefreshState(
         refreshing = uiState.refreshing,
-        onRefresh = { loadNextMovies(true) }
-    )
+        onRefresh = {loadNextMovies(true)})
 
-    Box(modifier = modifier
-        .fillMaxSize()
-        .background(color = MaterialTheme.colors.background)
-        .pullRefresh(state = pullRefreshState)
-    ){
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(color = MaterialTheme.colors.background)
+            .pullRefresh(state = pullRefreshState)
+    ) {
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
-            contentPadding =  PaddingValues(16.dp),
+            contentPadding = PaddingValues(16.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ){
             itemsIndexed(
                 uiState.movies,
-                key = {_,movie -> movie.movieId}
-            ){ index, movie ->
-                MovieListItem(movie = movie, onMovieClick ={navigateToDetail(movie)} )
+                key = {_, movie -> movie.id}
+            ){index, movie ->
+                MovieListItem(movie = movie, onMovieClick = { navigateToDetail(movie) })
+
                 if (index >= uiState.movies.size -1 && !uiState.loading && !uiState.loadFinished){
                     LaunchedEffect(key1 = Unit, block = { loadNextMovies(false) })
                 }

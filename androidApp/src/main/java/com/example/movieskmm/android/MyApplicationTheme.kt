@@ -17,14 +17,16 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun MyApplicationTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
         darkColors(
-            primary = Color(0xFFBB86FC),
-            primaryVariant = Color(0xFF3700B3),
-            secondary = Color(0xFF03DAC5)
+            primary = Dark4,
+            primaryVariant = Dark3,
+            secondary = Red,
+            surface = Dark2,
+            background = Dark1
         )
     } else {
         lightColors(

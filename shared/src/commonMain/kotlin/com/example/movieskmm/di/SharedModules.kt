@@ -5,6 +5,7 @@ import com.example.movieskmm.data.remote.MovieService
 import com.example.movieskmm.data.remote.RemoteDataSource
 import com.example.movieskmm.data.repository.MovieRepositoryImpl
 import com.example.movieskmm.domain.repository.MovieRepository
+import com.example.movieskmm.domain.usecase.GetMovieUseCase
 import com.example.movieskmm.domain.usecase.GetMoviesUseCase
 import org.koin.dsl.module
 
@@ -20,7 +21,7 @@ private val utilityModule = module {
 private val domainModule = module {
     single<MovieRepository> { MovieRepositoryImpl(get()) }
     factory { GetMoviesUseCase() }
-    factory { GetMoviesUseCase() }
+    factory { GetMovieUseCase() }
 }
 
 private val sharedModules = listOf(domainModule, dataModule, utilityModule)

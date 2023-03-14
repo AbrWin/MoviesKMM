@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.movieskmm.domain.model.Movie
 import com.abrsoftware.movieskmm.android.R
+
 @Composable
 fun MovieListItem(
     modifier: Modifier = Modifier,
@@ -40,7 +41,7 @@ fun MovieListItem(
                 contentAlignment = Alignment.Center
             ) {
                 AsyncImage(
-                    model = movie.poster_path,
+                    model = movie.imageUrl,
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = modifier
@@ -55,7 +56,7 @@ fun MovieListItem(
                     shape = CircleShape
                 ) {
                     Image(
-                        painter = painterResource(id =R.drawable.play_button),
+                        painter = painterResource(id = R.drawable.play_button),
                         contentDescription = null,
                         modifier = modifier.padding(12.dp).align(Alignment.Center)
                     )
@@ -74,7 +75,7 @@ fun MovieListItem(
                 )
                 Spacer(modifier = modifier.height(4.dp))
 
-                Text(text = movie.release_date, style = MaterialTheme.typography.caption)
+                Text(text = movie.releaseDate, style = MaterialTheme.typography.caption)
             }
         }
     }

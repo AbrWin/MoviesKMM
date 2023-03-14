@@ -5,11 +5,11 @@ import com.example.movieskmm.data.remote.MovieRemote
 
 internal fun MovieRemote.toMovie(): Movie {
     return Movie(
-        movieId = movieId,
+        id = id,
         title = title,
-        overview  = overview,
-        release_date = release_date,
-        poster_path = getImageUrl(poster_path)
+        description  = overview,
+        imageUrl = getImageUrl(posterImage),
+        releaseDate = releaseDate,
     )
 }
 
