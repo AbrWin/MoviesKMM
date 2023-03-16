@@ -14,6 +14,7 @@
 		F97F371529C14A79009535DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F371429C14A79009535DC /* HomeViewModel.swift */; };
 		F97F371829C16B27009535DC /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F371729C16B27009535DC /* Sample.swift */; };
 		F994C66A29C16C3D009BEAAF /* MovieGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994C66929C16C3D009BEAAF /* MovieGridItem.swift */; };
+		F994C66D29C38291009BEAAF /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994C66C29C38291009BEAAF /* DetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		F97F371429C14A79009535DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F97F371729C16B27009535DC /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		F994C66929C16C3D009BEAAF /* MovieGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridItem.swift; sourceTree = "<group>"; };
+		F994C66C29C38291009BEAAF /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				F994C66B29C38272009BEAAF /* detail */,
 				F97F371329C149EF009535DC /* home */,
 				F97F371629C16B17009535DC /* util */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
@@ -113,6 +116,14 @@
 				F97F371729C16B27009535DC /* Sample.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		F994C66B29C38272009BEAAF /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				F994C66C29C38291009BEAAF /* DetailScreen.swift */,
+			);
+			path = detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				F97F371829C16B27009535DC /* Sample.swift in Sources */,
+				F994C66D29C38291009BEAAF /* DetailScreen.swift in Sources */,
 				F97F371529C14A79009535DC /* HomeViewModel.swift in Sources */,
 				7555FF83242A565900829871 /* HomeScreen.swift in Sources */,
 				F994C66A29C16C3D009BEAAF /* MovieGridItem.swift in Sources */,
