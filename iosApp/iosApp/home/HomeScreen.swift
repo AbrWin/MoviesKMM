@@ -8,7 +8,11 @@ struct HomeScreen: View {
     
     var body: some View {
         NavigationStack{
+           
             ScrollView{
+                if !viewModel.isLoading {
+                    ContentLoader()
+                }
                 LazyVGrid(columns: gridColumns, spacing: 16){
                     
                     ForEach(viewModel.movies, id: \.id){movie in
@@ -24,17 +28,12 @@ struct HomeScreen: View {
                         .buttonStyle(PlainButtonStyle())
                     }
                     
-                    if viewModel.isLoading {
-                        Section(footer: ProgressView()){}
-                    }
-                    
-                    
                 }
                 .padding(.horizontal, 12)
                 .navigationDestination(for: Movie.self){movie in
                     DetailScreen(movie: movie)
                 }
-                
+        
             }
             .navigationTitle("Movies")
             

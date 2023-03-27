@@ -15,6 +15,7 @@ struct MovieGridItem: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8){
             ZStack{
+                
                 AsyncImage(url: URL(string: movie.imageUrl)){image in
                     image.resizable()
                 }placeholder: {
@@ -48,3 +49,4 @@ struct MovieGridItem_Previews: PreviewProvider {
         MovieGridItem(movie: sampleMovie)
     }
 }
+

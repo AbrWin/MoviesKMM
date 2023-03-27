@@ -11,6 +11,8 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* HomeScreen.swift */; };
+		F9184F1429D2293600355F62 /* ShimmerLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9184F1329D2293600355F62 /* ShimmerLoading.swift */; };
+		F9184F1629D2469300355F62 /* ContentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9184F1529D2469300355F62 /* ContentLoader.swift */; };
 		F97F371529C14A79009535DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F371429C14A79009535DC /* HomeViewModel.swift */; };
 		F97F371829C16B27009535DC /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F371729C16B27009535DC /* Sample.swift */; };
 		F994C66A29C16C3D009BEAAF /* MovieGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994C66929C16C3D009BEAAF /* MovieGridItem.swift */; };
@@ -37,6 +39,8 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9184F1329D2293600355F62 /* ShimmerLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerLoading.swift; sourceTree = "<group>"; };
+		F9184F1529D2469300355F62 /* ContentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoader.swift; sourceTree = "<group>"; };
 		F97F371429C14A79009535DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F97F371729C16B27009535DC /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		F994C66929C16C3D009BEAAF /* MovieGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridItem.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9184F1229D2290400355F62 /* components */,
 				F994C66B29C38272009BEAAF /* detail */,
 				F97F371329C149EF009535DC /* home */,
 				F97F371629C16B17009535DC /* util */,
@@ -98,6 +103,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9184F1229D2290400355F62 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				F9184F1329D2293600355F62 /* ShimmerLoading.swift */,
+				F9184F1529D2469300355F62 /* ContentLoader.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		F97F371329C149EF009535DC /* home */ = {
@@ -222,7 +236,9 @@
 				F97F371829C16B27009535DC /* Sample.swift in Sources */,
 				F994C66D29C38291009BEAAF /* DetailScreen.swift in Sources */,
 				F97F371529C14A79009535DC /* HomeViewModel.swift in Sources */,
+				F9184F1429D2293600355F62 /* ShimmerLoading.swift in Sources */,
 				7555FF83242A565900829871 /* HomeScreen.swift in Sources */,
+				F9184F1629D2469300355F62 /* ContentLoader.swift in Sources */,
 				F994C66A29C16C3D009BEAAF /* MovieGridItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
